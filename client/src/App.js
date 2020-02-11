@@ -1,11 +1,22 @@
 import React from 'react';
+import Template from './Components/Component'
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Client</h1>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      message : "This is a Template"
+    }
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <h1>Client</h1>
+        <Template/>
+      </div>
+    );
+  }
 }
 
 export default App;

@@ -3,10 +3,10 @@ const request = require('supertest')
 
 describe('server routes', () => {
   describe('GET /user', () => {
-    it('responds with html', (done) => {
+    it('responds with json', (done) => {
       request(app)
         .get('/')
-        .expect('Content-Type', "text/html; charset=utf-8")
+        .expect('Content-Type', /json/)
         .expect(200, done)
     })
   })
